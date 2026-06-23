@@ -1,6 +1,7 @@
 import uuid
 
 from google import genai
+from google.genai import types
 
 from app.core.config import settings
 from app.db.vector_store import get_vector_store
@@ -12,11 +13,14 @@ def embed_and_store(chunks: list[str], document_id: int, filename: str):
         return 0
 
     response = client.models.embed_content(
-        model='text-embedding-004',
-        contents=chunks
-    )
+            model='gemini-embedding-001',
+            contents=chunks,
+            config=types.EmbedContentConfig(output_dimensionality=768)
+        )
+
     if not response.embeddings:
         return 0
+
     embeddings = [e.values for e in response.embeddings]
 
     vectors = []
