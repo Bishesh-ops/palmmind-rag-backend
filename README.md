@@ -22,7 +22,6 @@ A backend service built with FastAPI that provides document ingestion with chunk
 
 ```bash
    git clone https://github.com/Bishesh-ops/palmmind-rag-backend.git
-   cd <your-repo-folder>
 ```
 
 2. **Create a virtual environment and install dependencies:**
