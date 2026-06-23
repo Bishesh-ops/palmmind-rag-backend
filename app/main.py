@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
-from app.api import document
+from app.api import chat, document
 from app.core.config import settings
 from app.db.relational import Base, engine
 
@@ -27,3 +27,4 @@ async def health_check():
     return {"status": "healthy", "project": settings.PROJECT_NAME}
 
 app.include_router(document.router)
+app.include_router(chat.router)
