@@ -1,5 +1,4 @@
 from contextlib import asynccontextmanager
-from pydoc import doc
 
 from fastapi import FastAPI
 
