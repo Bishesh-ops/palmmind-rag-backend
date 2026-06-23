@@ -15,7 +15,7 @@ except Exception as e:
     logger.error(f"Failed to connect to Pinecone: {str(e)}")
     pinecone_index = None
 
-def get_vectore_store():
+def get_vector_store():
     if pinecone_index is None:
         raise ConnectionError("Pinecone index is not initialised.")
     return pinecone_index
