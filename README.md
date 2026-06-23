@@ -5,8 +5,8 @@ A backend service built with FastAPI that provides document ingestion with chunk
 ## Tech Stack
 
 - **Framework:** FastAPI (Python)
-- **LLM & Embeddings:** [Insert Choice Here]
-- **Vector Database:** Pinecone / Qdrant
+- **LLM & Embeddings:** Gemini/Gemini-embedding
+- **Vector Database:** Pinecone
 - **Relational Database:** SQLite3
 - **Memory:** Redis
 
